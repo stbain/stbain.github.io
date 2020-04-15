@@ -3,16 +3,6 @@ layout: page
 title: About
 permalink: /about/
 ---
+My name is Stuart Bain. I was born and raised in Roanoke, Virginia. I served in the United States Marine Corps after high school and studied computer science and business at Virginia Tech and American Sentinel University. My wife Sarah and I now live in Salem, Virginia and have three children. I work for Amazon Web Services as a Solutions Architect. 
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+I am a musician, avid gamer, and enjoy being active in politics when I can.
