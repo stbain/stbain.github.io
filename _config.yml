@@ -28,7 +28,7 @@ github_username:  stbain
 paginate: 10
 
 # Build settings
-theme: minima
+theme: jekyll-theme-hacker
 plugins:
   - jekyll-feed
   - jekyll-paginate
