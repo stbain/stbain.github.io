@@ -108,10 +108,8 @@ Another way to think of it is...
 
 It's not an exact solution, but more of a general rule of thumb. The goal is simply to ensure all of your lots have the exact same number of digits and that none of them start with zero.
 
-```
-Side note: 
+### Side note: ###
 Some auctioneers also reserve the first five to ten lot numbers for informational notices such as the bidder terms and conditions, announcements, etc. In that case, you may end up with the first round of bidding going towards lot number 1010 or something similar. If there are over 9000 lots in the auction, the lot number total will need to be adjusted accordingly.
-```
 
 ## Conclusion ##
 
