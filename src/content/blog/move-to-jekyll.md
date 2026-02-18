@@ -7,7 +7,6 @@ tags: ["Jekyll", "WordPress", "Static Sites", "GitHub Pages", "Web Development",
 category: "technical"
 ---
 
-# The Move to Jekyll
 
 ## Where have you been?
 

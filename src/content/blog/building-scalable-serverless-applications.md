@@ -10,7 +10,6 @@ featured: true
 category: "technical"
 ---
 
-# Building Scalable Serverless Applications with AWS CDK
 
 Serverless architecture has revolutionized how we build and deploy applications. In this comprehensive guide, I'll walk you through the process of building scalable serverless applications using AWS CDK (Cloud Development Kit) with TypeScript.
 

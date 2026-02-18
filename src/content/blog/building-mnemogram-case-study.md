@@ -8,7 +8,6 @@ category: "business"
 featured: true
 ---
 
-# From Idea to Production: Building Mnemogram
 
 Building and launching [Mnemogram](https://mnemogram.ai) has been one of the most rewarding projects of my career. This AI-powered memory service went from concept to production in just a few months, and I wanted to share the journey, technical decisions, and lessons learned along the way.
 

@@ -7,7 +7,6 @@ tags: ["Marine Corps", "Marines", "USMC", "Military", "Veterans"]
 category: "personal"
 ---
 
-# Happy 235th Birthday Marines
 
 Today marks the 235th birthday of the [United States Marine Corps](http://www.marines.com). What many people don't know is that the Marine Corps was "born in a bar." The USMC Heritage page tells the story best:
 

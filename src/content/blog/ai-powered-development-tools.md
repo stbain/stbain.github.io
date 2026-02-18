@@ -8,7 +8,6 @@ category: "opinion"
 featured: true
 ---
 
-# The Rise of AI-Powered Development Tools
 
 Artificial Intelligence is fundamentally changing how we write, test, and deploy code. As someone who has been building AI-powered applications like Mnemogram, I've witnessed firsthand the transformative impact these tools are having on our industry.
 

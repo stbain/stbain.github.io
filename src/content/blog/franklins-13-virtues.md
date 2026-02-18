@@ -7,7 +7,6 @@ tags: ["Benjamin Franklin", "Life", "Morals", "Reading", "Virtue", "Personal Dev
 category: "personal"
 ---
 
-# Franklin's 13 Virtues
 
 On occasion, I tend to re-read books that have helped me through the years. For example, I regularly re-read [Dale Carnegie's books](http://www.amazon.com/gp/product/1439167346/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=stubai-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1439167346), [David Allen's "Getting Things Done"](http://www.amazon.com/gp/product/0142000280/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=stubai-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=0142000280), and others. Right now, I'm re-reading [Benjamin Franklin's autobiography](http://www.amazon.com/gp/product/1936594374/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&tag=stubai-20&linkCode=as2&camp=1789&creative=9325&creativeASIN=1936594374). Although I don't think he ever got around to publishing his "Art of Virtue" book, I do like reading how he applied his 13 virtues to his life. Here they are:
 

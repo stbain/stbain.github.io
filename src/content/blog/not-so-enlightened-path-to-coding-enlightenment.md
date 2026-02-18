@@ -8,7 +8,6 @@ category: "technical"
 featured: true
 ---
 
-# Not-So-Enlightened Path to Coding Enlightenment
 
 A friend of mine is finishing up a BSCS and looking to get into the tech industry. Ready to code? Here's the list I sent him...
 

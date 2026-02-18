@@ -7,7 +7,6 @@ tags: ["Humor", "Facebook", "Scammers", "Chat", "Internet"]
 category: "personal"
 ---
 
-# Can You Help Me Hide the Body?
 
 Someone created a fake Facebook account and made it look like one of existing friends. I received a friend request and accepted it thinking perhaps she had lost access to her other account or was wanting to set up a separate account for business. It wasn't too long before the new account started arising suspicion. Sure enough, I knew for certain it was a fake account as soon as the person operating the new account tried to fire up a chat session with me. Naturally, I decided to mess with him/her. Here's the transcript:
 

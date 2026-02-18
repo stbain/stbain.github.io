@@ -8,7 +8,6 @@ category: "personal"
 featured: true
 ---
 
-# Happy 236th Birthday Marines
 
 Today the Marine Corps celebrates its 236th birthday. Happy birthday to all of my fellow Marines out there. Just like [last year](http://stuartbain.com/2010/11/10/happy-235th-birthday-marines/), I would like to pay tribute to one of my fellow Marines I served with. This year, that Marine is none other than the world famous [Daryl Parker](http://www.darylparker.com/). You may recognize him from the second season of The History Channel's show, [Top Shot](http://www.history.com/shows/top-shot).
 

@@ -8,7 +8,6 @@ category: "technical"
 featured: true
 ---
 
-# Nagging Numbers
 
 ## The Problem
 
