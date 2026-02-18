@@ -2,7 +2,7 @@
 title: "The Rise of AI-Powered Development Tools"
 description: "Exploring how AI is transforming the software development landscape and what it means for developers."
 author: "Stuart Bain"
-pubDate: 2024-02-28T00:00:00Z
+pubDate: 2026-01-17T00:00:00Z
 tags: ["AI", "Development", "Future", "Tools", "Productivity"]
 category: "opinion"
 featured: true
