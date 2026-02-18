@@ -1,0 +1,388 @@
+---
+import Base from '../layouts/Base.astro';
+
+const experience = [
+  {
+    title: "Senior Partner Solutions Architect",
+    company: "Amazon Web Services (AWS)",
+    period: "2019 - Present",
+    location: "Federal System Integrators",
+    description: "Partner with government integrators and agencies to design cloud-based distributed platforms for DoD and intelligence communities. Lead architecture of Kubernetes-based containerized systems with infrastructure as code and AI-driven software development workflows.",
+    achievements: [
+      "Surpassed team's 2024 quota through technical leadership on major RFx submissions",
+      "Delivered AI-DLC workshops helping customers automate secure software delivery",
+      "Architected secure, scalable government cloud solutions aligned with FedRAMP and NIST RMF",
+      "Promoted through Solutions Architect → Manager → Technical Program Manager → Senior Partner SA",
+      "Led Navy/Marine Corps Solutions Architecture team of 13 direct reports (2021-2022)",
+      "Managed strategic sales activities with senior military officers and executives"
+    ]
+  },
+  {
+    title: "Senior Consultant",
+    company: "Red Hat",
+    period: "2016 - 2019", 
+    location: "North America Public Sector",
+    description: "Provided solutions architecture and consulting for container platforms, DevSecOps, and automation. Key contributor to digital transformation initiatives for US Navy, Air Force, FBI, USPS, and Lockheed Martin's F-22 Raptor program.",
+    achievements: [
+      "Pioneered containerization for Lockheed Martin's F-22 Raptor on-board systems",
+      "Original team member on U.S. Navy's C2C24 'Compile to Combat in 24 Hours' DevSecOps initiative",
+      "Led containerization of U.S. Air Force's Air Operations Center and open-source ODIE project",
+      "Architected OpenShift solutions for FBI's Case Management System",
+      "Implemented inheritable NIST 800-53 controls at container platform level"
+    ]
+  },
+  {
+    title: "Practice Leader, Performance Monitoring",
+    company: "Dell Software (now Quest)",
+    period: "2013 - 2016",
+    location: "Commercial & Public Sector",
+    description: "Led entire performance monitoring practice including solutions architects, consultants, and project managers. Managed P&L while delivering custom monitoring solutions for infrastructure, networking, and application performance.",
+    achievements: [
+      "Managed complete practice P&L for commercial and public sector customers",
+      "Promoted to Practice Leader within first year based on technical breadth",
+      "Delivered both off-the-shelf and bespoke monitoring solutions",
+      "Elevated team effectiveness through comprehensive training programs"
+    ]
+  },
+  {
+    title: "Chief Technology Officer → President & CEO",
+    company: "AuctionServices.com",
+    period: "2002 - 2013",
+    location: "Roanoke, VA",
+    description: "Directed technical operations and product development, ultimately leading company growth and strategic positioning for successful industry acquisition. Became recognized thought leader in auction technology.",
+    achievements: [
+      "Led company through growth phase culminating in successful acquisition",
+      "Initiated modernization of auction applications - first-of-its-kind online solution",
+      "Coordinated development efforts between U.S. and India-based teams",
+      "Implemented comprehensive cybersecurity improvements and system hardening",
+      "Early cloud adopter - migrated binary storage to AWS S3 in 2006"
+    ]
+  }
+];
+
+const skills = {
+  "Cloud & Infrastructure": ["AWS (GovCloud, Commercial, Classified)", "Azure", "GCP", "VPC", "Security Groups", "GuardDuty", "IAM", "Lambda", "Serverless"],
+  "Containers & DevOps": ["Kubernetes", "Docker", "OpenShift", "CI/CD", "Jenkins", "GitHub Actions", "Ansible", "Terraform", "CloudFormation", "CDK"],
+  "Programming": ["Python", "Rust", "TypeScript", "JavaScript", "Ruby", "Perl", "PHP", "Java", "Bash", "SQL", "HTML/CSS"],
+  "Databases": ["PostgreSQL", "MySQL", "MongoDB", "DynamoDB", "SQLite", "Redis", "Vector Databases"],
+  "Security & Compliance": ["NIST 800-53/171", "FedRAMP", "DoD Cloud Computing SRG", "RMF", "Zero Trust", "DISA STIGs"],
+  "AI/ML": ["Agentic AI Development", "AI-DLC", "RAG", "Vector Search", "OpenAI API", "Machine Learning"]
+};
+
+const education = [
+  {
+    degree: "Bachelor of Science in Business Administration (BSBA)",
+    institution: "American Sentinel University (now Post University)",
+    year: "Business Informatics",
+    details: "Coursework in Information Technology, Data Science, Computer Science, Management, and Leadership"
+  },
+  {
+    degree: "Computer Science and Management Science Studies",
+    institution: "Virginia Polytechnic Institute and State University (Virginia Tech)",
+    year: "1996-1998",
+    details: "Attended under Marine Enlisted Commissioning and Education Program (MECEP) while on active duty"
+  }
+];
+
+const certifications = [
+  { name: "AWS Solutions Architect – Professional", link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/43HRBZ6KNJB4QL56", current: true },
+  { name: "AWS Solutions Architect – Associate", link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/C8R8WY92LJQ4Q8G7", current: true },
+  { name: "AWS SysOps Administrator – Associate", link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/TJXB6LH23BB1QM3L", current: true },
+  { name: "AWS Cloud Practitioner", link: "https://cp.certmetrics.com/amazon/en/public/verify/credential/X3MN4XKCDM4E1VSJ", current: true },
+  { name: "Red Hat Certified System Administrator", link: null, current: false },
+  { name: "CompTIA Security+", link: null, current: false },
+  { name: "Cisco Certified Network Associate (CCNA)", link: null, current: false }
+];
+
+const militaryService = {
+  branch: "United States Marine Corps",
+  period: "1992 - 1998", 
+  rank: "Sergeant (E-5)",
+  role: "Intelligence Analyst (MOS 0231)",
+  unit: "Marine Light Attack Helicopter Squadron 369 (HMLA-369)",
+  achievements: [
+    "Earned meritorious promotion to every rank up to Sergeant",
+    "Selected for highly competitive MECEP program (1996)",
+    "Supported classified IT and network systems for aviation intelligence",
+    "First exposure to networked computing in classified military environment",
+    "Honorably discharged January 1998"
+  ]
+};
+---
+
+<Base title="About Stuart Bain - Resume & Background" description="Strategic IT executive and solutions architect with 25+ years building secure, scalable technology platforms for enterprise and government.">
+  <!-- Hero Section -->
+  <section class="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <div class="max-w-4xl mx-auto text-center">
+      <img src="/stuart-caricature.png" alt="Stuart Bain" class="w-48 h-48 mx-auto mb-8 rounded-full shadow-2xl object-cover object-top" />
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
+        Stuart M. Bain
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-4">
+        Strategic IT executive and solutions architect with 25+ years delivering innovative, secure, and scalable technology platforms for enterprise and government customers.
+      </p>
+      <div class="flex items-center justify-center space-x-6 text-sm text-gray-600 dark:text-gray-400">
+        <span class="flex items-center">
+          <span class="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
+          Active Security Clearance
+        </span>
+        <span class="flex items-center">
+          <span class="w-3 h-3 bg-blue-500 rounded-full mr-2"></span>
+          Marine Veteran
+        </span>
+        <span class="flex items-center">
+          <span class="w-3 h-3 bg-orange-500 rounded-full mr-2"></span>
+          AWS Expert
+        </span>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Professional Summary -->
+  <section class="py-16 px-4 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+        Professional Summary
+      </h2>
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+            As a strategic IT executive and solutions architect, I combine deep technical expertise with proven business leadership. My career spans government service, enterprise consulting, and entrepreneurship - from serving as an Intelligence Analyst in the Marine Corps to leading technical teams at AWS.
+          </p>
+          <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+            I specialize in cloud architecture, DevSecOps, containerization, and AI-driven development. My expertise in secure, compliant solutions for defense and intelligence communities is complemented by hands-on engineering skills and a passion for open-source innovation.
+          </p>
+          <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+            When not architecting cloud solutions or coding, I'm exploring emerging technologies, mentoring developers, and pushing the boundaries of what's possible with AI-powered development workflows.
+          </p>
+        </div>
+        <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 p-8 rounded-xl">
+          <h3 class="text-2xl font-bold mb-6 text-gray-900 dark:text-white">Career Highlights</h3>
+          <div class="space-y-4">
+            <div class="flex items-center">
+              <span class="text-blue-500 text-2xl mr-4">📍</span>
+              <span class="text-gray-700 dark:text-gray-300">Salem, VA | 25+ years experience</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-green-500 text-2xl mr-4">🏛️</span>
+              <span class="text-gray-700 dark:text-gray-300">AWS Federal Solutions Architect</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-purple-500 text-2xl mr-4">🚀</span>
+              <span class="text-gray-700 dark:text-gray-300">Red Hat Container Platform Expert</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-orange-500 text-2xl mr-4">🎖️</span>
+              <span class="text-gray-700 dark:text-gray-300">USMC Veteran (E-5, Intelligence)</span>
+            </div>
+            <div class="flex items-center">
+              <span class="text-red-500 text-2xl mr-4">🔒</span>
+              <span class="text-gray-700 dark:text-gray-300">Active Security Clearance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Military Service -->
+  <section class="py-16 px-4 bg-gradient-to-br from-red-50 to-blue-50 dark:from-gray-900 dark:to-gray-800">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+        Military Service
+      </h2>
+      <div class="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+          <div>
+            <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-2 flex items-center">
+              <span class="text-4xl mr-3">🇺🇸</span>
+              {militaryService.branch}
+            </h3>
+            <div class="text-xl text-blue-600 dark:text-blue-400 font-medium mb-2">
+              {militaryService.rank} | {militaryService.role}
+            </div>
+            <div class="text-lg text-gray-600 dark:text-gray-400 mb-2">
+              {militaryService.unit}
+            </div>
+            <div class="text-gray-500 dark:text-gray-400">
+              Camp Pendleton, CA
+            </div>
+          </div>
+          <div class="mt-4 md:mt-0 text-xl text-gray-600 dark:text-gray-400 font-medium">
+            {militaryService.period}
+          </div>
+        </div>
+        <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+          Enlisted after high school and served with distinction as an Intelligence Analyst supporting classified aviation operations. This foundational experience established my career-long commitment to service, security, and technical excellence.
+        </p>
+        <div>
+          <h4 class="font-semibold text-gray-900 dark:text-white mb-3">Service Highlights:</h4>
+          <ul class="grid md:grid-cols-2 gap-2 text-gray-600 dark:text-gray-400">
+            {militaryService.achievements.map((achievement) => (
+              <li class="flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">•</span>
+                {achievement}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Experience -->
+  <section class="py-16 px-4 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+        Professional Experience
+      </h2>
+      <div class="space-y-12">
+        {experience.map((job, index) => (
+          <div class="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+            <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-4">
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                  {job.title}
+                </h3>
+                <div class="text-lg text-blue-600 dark:text-blue-400 font-medium mb-1">
+                  {job.company}
+                </div>
+                <div class="text-gray-500 dark:text-gray-400">
+                  {job.location}
+                </div>
+              </div>
+              <div class="mt-2 md:mt-0 text-gray-600 dark:text-gray-400 font-medium">
+                {job.period}
+              </div>
+            </div>
+            <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+              {job.description}
+            </p>
+            <div>
+              <h4 class="font-semibold text-gray-900 dark:text-white mb-2">Key Achievements:</h4>
+              <ul class="grid md:grid-cols-1 gap-1 text-gray-600 dark:text-gray-400">
+                {job.achievements.map((achievement) => (
+                  <li class="flex items-start">
+                    <span class="text-green-500 mr-2 mt-1">✓</span>
+                    {achievement}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))}
+      </div>
+      
+      <!-- Entrepreneurship -->
+      <div class="mt-12 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900 dark:to-blue-900 rounded-xl p-8 shadow-lg">
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center">
+          <span class="text-3xl mr-3">🚀</span>
+          Entrepreneurship & Innovation
+        </h3>
+        <div class="text-lg text-blue-600 dark:text-blue-400 font-medium mb-2">
+          Packetvision LLC — Founder & CEO (2002-Present)
+        </div>
+        <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+          Founded IT consulting firm specializing in open-source solutions, network security, and custom development. 
+          Built multiple SaaS products including Mnemogram (AI memory service), OpenClaw (agent framework), 
+          and Mission Control (operational dashboard). Maintained active security clearance for government consulting while 
+          exploring cutting-edge technologies and contributing to the open-source community.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Skills -->
+  <section class="py-16 px-4 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+        Technical Expertise
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {Object.entries(skills).map(([category, skillList]) => (
+          <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 p-6 rounded-xl">
+            <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-4">
+              {category}
+            </h3>
+            <div class="flex flex-wrap gap-2">
+              {skillList.map((skill) => (
+                <span class="px-3 py-2 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-sm rounded-lg font-medium">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+  
+  <!-- Education & Certifications -->
+  <section class="py-16 px-4 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
+        Education & Certifications
+      </h2>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Education -->
+        <div class="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg">
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Education</h3>
+          <div class="space-y-6">
+            {education.map((edu) => (
+              <div class="border-l-4 border-blue-500 pl-6">
+                <h4 class="text-xl font-semibold text-gray-900 dark:text-white mb-1">
+                  {edu.degree}
+                </h4>
+                <div class="text-blue-600 dark:text-blue-400 font-medium mb-1">
+                  {edu.institution}
+                </div>
+                <div class="text-gray-500 dark:text-gray-400 mb-2">
+                  {edu.year}
+                </div>
+                <p class="text-gray-600 dark:text-gray-400 text-sm">
+                  {edu.details}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <!-- Certifications -->
+        <div class="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg">
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Certifications</h3>
+          <div class="space-y-4">
+            {certifications.map((cert) => (
+              <div class="flex items-center">
+                <div class={`w-3 h-3 ${cert.current ? 'bg-green-500' : 'bg-gray-400'} rounded-full mr-4 flex-shrink-0`}></div>
+                {cert.link ? (
+                  <a href={cert.link} target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:text-blue-300 underline transition-colors">{cert.name}</a>
+                ) : (
+                  <span class="text-gray-500 dark:text-gray-500">{cert.name} <span class="text-xs">(Previously held)</span></span>
+                )}
+              </div>
+            ))}
+          </div>
+          
+          <!-- Additional achievements -->
+          <div class="mt-8 pt-6 border-t border-gray-200 dark:border-gray-700">
+            <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Additional Recognition</h4>
+            <div class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+              <div class="flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">•</span>
+                Programming since elementary school (BASIC, Pascal, C++)
+              </div>
+              <div class="flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">•</span>
+                Open-source advocate since 1996; co-founded government OSS lobbying organization (2002)
+              </div>
+              <div class="flex items-start">
+                <span class="text-blue-500 mr-2 mt-1">•</span>
+                Linux user and contributor since 1996
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Base>

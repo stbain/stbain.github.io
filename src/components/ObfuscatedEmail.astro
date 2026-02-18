@@ -1,0 +1,55 @@
+---
+export interface Props {
+  class?: string;
+  text?: string;
+}
+
+const { class: className = '', text = 'stbain@proton.me' } = Astro.props;
+const emailId = `email-${Math.random().toString(36).substr(2, 9)}`;
+---
+
+<span 
+  id={emailId}
+  class={`obfuscated-email ${className}`}
+  data-user="stbain"
+  data-domain="proton.me"
+  style="cursor: pointer; text-decoration: underline;"
+>
+  {text}
+</span>
+
+<noscript>
+  <span class={className}>Enable JavaScript to see email</span>
+</noscript>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const emailElements = document.querySelectorAll('.obfuscated-email');
+  
+  emailElements.forEach(function(element) {
+    const user = element.getAttribute('data-user');
+    const domain = element.getAttribute('data-domain');
+    
+    if (user && domain) {
+      element.addEventListener('click', function(e) {
+        e.preventDefault();
+        const email = user + '@' + domain;
+        window.location.href = 'mailto:' + email;
+      });
+      
+      // Update the display text to show the email (assembled by JS)
+      element.textContent = user + '@' + domain;
+    }
+  });
+});
+</script>
+
+<style>
+.obfuscated-email {
+  color: inherit;
+}
+
+.obfuscated-email:hover {
+  opacity: 0.8;
+}
+</style>

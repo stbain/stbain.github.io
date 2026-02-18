@@ -1,0 +1,318 @@
+---
+import Base from '../layouts/Base.astro';
+import ObfuscatedEmail from '../components/ObfuscatedEmail.astro';
+
+const projects = [
+  {
+    title: "Mnemogram",
+    subtitle: "AI-Powered Memory Service",
+    description: "A serverless AI memory service that helps developers and professionals store, search, and retrieve information using natural language queries. Built with Rust Lambda backend and Next.js frontend.",
+    longDescription: "Mnemogram is a revolutionary memory service that uses advanced AI to help users store and retrieve information naturally. The system processes over 50GB of data with sub-200ms search response times, featuring vector embeddings, semantic search, and intelligent categorization.",
+    tech: ["Rust", "AWS Lambda", "Next.js", "TypeScript", "OpenAI", "DynamoDB", "S3", "CDK"],
+    status: "Live",
+    link: "https://mnemogram.ai",
+    image: "/mnemogram-logo.png",
+    logo: "/mnemogram-logo.png",
+    featured: true,
+    category: "SaaS Product",
+    achievements: [
+      "50GB+ of data processed with 99.9% uptime",
+      "Sub-200ms average search response time",
+      "Intelligent semantic search and categorization",
+      "Comprehensive API with TypeScript and Python SDKs"
+    ],
+    caseStudy: "/blog/building-mnemogram-case-study"
+  },
+  {
+    title: "Deadrop",
+    subtitle: "Inter-Agent Message Queue",
+    description: "SQLite-based message queue system for asynchronous communication between AI agents. Features persistent messaging, acknowledgments, and collision avoidance for autonomous workflows.",
+    longDescription: "Deadrop provides a lightweight, reliable message queue specifically designed for AI agent coordination. Built on SQLite for simplicity and reliability, it enables agents to communicate asynchronously with delivery confirmations and workflow coordination features.",
+    tech: ["Node.js", "TypeScript", "SQLite", "CLI", "Message Queue", "Agent Communication"],
+    status: "Open Source",
+    link: null,
+    image: "/images/projects/deadrop.png",
+    logo: "📬",
+    featured: true,
+    category: "Developer Tool",
+    achievements: [
+      "Reliable SQLite-based message persistence",
+      "Agent collision avoidance and coordination",
+      "Command-line interface for easy integration",
+      "Autonomous workflow message handling"
+    ]
+  },
+  {
+    title: "Mnemogram TypeScript SDK",
+    subtitle: "Official TypeScript SDK",
+    description: "Comprehensive TypeScript SDK for the Mnemogram API, providing type-safe memory operations, search functionality, and seamless integration with Node.js and browser environments.",
+    longDescription: "The official TypeScript SDK makes integrating with Mnemogram's AI memory service simple and type-safe. Features comprehensive type definitions, async/await support, and optimized for both server and client-side applications.",
+    tech: ["TypeScript", "Node.js", "REST API", "SDK", "Type Safety", "NPM"],
+    status: "Open Source",
+    link: "https://www.npmjs.com/package/mnemogram-sdk-ts",
+    image: "/mnemogram-logo.png",
+    logo: "/mnemogram-logo.png",
+    featured: false,
+    category: "SDK",
+    achievements: [
+      "Full TypeScript type safety and IntelliSense support",
+      "Comprehensive API coverage with async/await",
+      "Browser and Node.js compatibility",
+      "Detailed documentation and examples"
+    ]
+  },
+  {
+    title: "Mnemogram Python SDK",
+    subtitle: "Official Python SDK",
+    description: "Python SDK for Mnemogram with full API coverage, async support, and Pythonic interfaces. Perfect for data science workflows, automation scripts, and server applications.",
+    longDescription: "The official Python SDK brings Mnemogram's AI memory capabilities to the Python ecosystem. Designed with Python best practices, it supports both synchronous and asynchronous operations, making it perfect for data science and automation workflows.",
+    tech: ["Python", "AsyncIO", "REST API", "SDK", "Type Hints", "PyPI"],
+    status: "Open Source",
+    link: "https://pypi.org/project/mnemogram-sdk-py/",
+    image: "/mnemogram-logo.png",
+    logo: "/mnemogram-logo.png",
+    featured: false,
+    category: "SDK",
+    achievements: [
+      "Full async/await support with asyncio",
+      "Pythonic interfaces with type hints",
+      "Data science integration with pandas/numpy",
+      "Comprehensive test suite and documentation"
+    ]
+  }
+];
+
+const categories = [...new Set(projects.map(p => p.category))];
+const statusColors = {
+  "Live": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+  "Production": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
+  "In Development": "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
+  "Planning": "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+  "Open Source": "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200"
+};
+
+const featuredProjects = projects.filter(p => p.featured);
+const regularProjects = projects.filter(p => !p.featured);
+---
+
+<Base title="Projects - Stuart Bain" description="Explore Stuart Bain's portfolio of software projects including AI-powered applications, serverless platforms, and innovative developer tools.">
+  <!-- Hero Section -->
+  <section class="py-20 px-4 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <div class="max-w-6xl mx-auto text-center">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
+        Projects
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
+        A showcase of innovative software solutions, from AI-powered services to comprehensive management platforms. 
+        Each project represents a unique challenge and creative solution.
+      </p>
+    </div>
+  </section>
+
+  <!-- Portfolio Stats -->
+  <section class="py-16 px-4 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">4</div>
+          <div class="text-gray-600 dark:text-gray-400">Open Source Projects</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">2</div>
+          <div class="text-gray-600 dark:text-gray-400">Live Services</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">3</div>
+          <div class="text-gray-600 dark:text-gray-400">Technology Stacks</div>
+        </div>
+        <div>
+          <div class="text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2">50GB+</div>
+          <div class="text-gray-600 dark:text-gray-400">Data Processed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects -->
+  <section class="py-16 px-4 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
+        Featured Projects
+      </h2>
+      <div class="space-y-16">
+        {featuredProjects.map((project, index) => (
+          <div class={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-12`}>
+            <div class="lg:w-1/2">
+              <div class="bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 rounded-xl aspect-video flex items-center justify-center">
+                {project.logo && project.logo.startsWith('/') ? (
+                  <img src={project.logo} alt={project.title} class="w-32 h-32 object-contain" />
+                ) : (
+                  <div class="text-8xl">{project.logo || '🖼️'}</div>
+                )}
+              </div>
+            </div>
+            <div class="lg:w-1/2 space-y-6">
+              <div class="flex items-center gap-4">
+                <span class={`px-4 py-2 rounded-full text-sm font-medium ${statusColors[project.status as keyof typeof statusColors]}`}>
+                  {project.status}
+                </span>
+                <span class="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                  {project.category}
+                </span>
+              </div>
+              
+              <h3 class="text-4xl font-bold text-gray-900 dark:text-white">
+                {project.title}
+              </h3>
+              <p class="text-xl text-blue-600 dark:text-blue-400 font-medium">
+                {project.subtitle}
+              </p>
+              
+              <p class="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                {project.longDescription}
+              </p>
+              
+              <div>
+                <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">Key Achievements</h4>
+                <ul class="space-y-2">
+                  {project.achievements.map(achievement => (
+                    <li class="flex items-start">
+                      <svg class="w-5 h-5 text-green-500 mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                      </svg>
+                      <span class="text-gray-600 dark:text-gray-400">{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div class="flex flex-wrap gap-3">
+                {project.tech.slice(0, 6).map(tech => (
+                  <span class="px-3 py-2 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 text-sm rounded-lg border border-gray-300 dark:border-gray-600">
+                    {tech}
+                  </span>
+                ))}
+                {project.tech.length > 6 && (
+                  <span class="px-3 py-2 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 text-sm rounded-lg">
+                    +{project.tech.length - 6} more
+                  </span>
+                )}
+              </div>
+              
+              <div class="flex gap-4">
+                {project.link && (
+                  <a 
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+                  >
+                    Visit Project
+                    <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    </svg>
+                  </a>
+                )}
+                <!-- Code button removed -->
+                {project.caseStudy && (
+                  <a 
+                    href={project.caseStudy}
+                    class="inline-flex items-center px-6 py-3 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-600 font-semibold rounded-lg transition-all duration-300"
+                  >
+                    Case Study
+                    <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 0v12h8V4H6z" clip-rule="evenodd"></path>
+                    </svg>
+                  </a>
+                )}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- All Projects Grid -->
+  <section class="py-16 px-4 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
+        All Projects
+      </h2>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map(project => (
+          <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+            <div class="bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-800 h-48 flex items-center justify-center">
+              {project.logo && project.logo.startsWith('/') ? (
+                <img src={project.logo} alt={project.title} class="w-24 h-24 object-contain" />
+              ) : (
+                <div class="text-6xl">{project.logo || '🖼️'}</div>
+              )}
+            </div>
+            <div class="p-6">
+              <div class="flex items-center justify-between mb-4">
+                <span class={`px-3 py-1 rounded-full text-sm font-medium ${statusColors[project.status as keyof typeof statusColors]}`}>
+                  {project.status}
+                </span>
+              </div>
+              
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                {project.title}
+              </h3>
+              <p class="text-blue-600 dark:text-blue-400 font-medium mb-3 text-sm">
+                {project.subtitle}
+              </p>
+              
+              <p class="text-gray-600 dark:text-gray-400 mb-4 text-sm leading-relaxed">
+                {project.description}
+              </p>
+              
+              <div class="flex flex-wrap gap-2 mb-4">
+                {project.tech.slice(0, 3).map(tech => (
+                  <span class="px-2 py-1 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-xs rounded border border-gray-300 dark:border-gray-600">
+                    {tech}
+                  </span>
+                ))}
+                {project.tech.length > 3 && (
+                  <span class="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-500 dark:text-gray-400 text-xs rounded">
+                    +{project.tech.length - 3}
+                  </span>
+                )}
+              </div>
+              
+              <div class="flex gap-2">
+                {project.link && (
+                  <a 
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="flex-1 text-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold rounded transition-colors"
+                  >
+                    Visit
+                  </a>
+                )}
+                <!-- Code button removed -->
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Technologies -->
+  <section class="py-16 px-4 bg-gray-50 dark:bg-gray-800">
+    <div class="max-w-6xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-16 text-gray-900 dark:text-white">
+        Technologies & Tools
+      </h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        {[...new Set(projects.flatMap(p => p.tech))].sort().map(tech => (
+          <span class="px-4 py-2 bg-white dark:bg-gray-900 text-gray-700 dark:text-gray-300 rounded-lg border border-gray-300 dark:border-gray-600 font-medium">
+            {tech}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>

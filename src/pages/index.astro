@@ -1,0 +1,158 @@
+---
+import Base from '../layouts/Base.astro';
+import ObfuscatedEmail from '../components/ObfuscatedEmail.astro';
+
+const projects = [
+  {
+    title: "Mnemogram",
+    description: "AI-powered memory service with vector search and natural language queries. Built with Rust Lambda backend and Next.js frontend.",
+    tech: ["Rust", "AWS Lambda", "Next.js", "TypeScript", "CDK"],
+    status: "Live",
+    link: "https://mnemogram.ai",
+    icon: "🧠"
+  },
+  {
+    title: "Deadrop",
+    description: "SQLite-based async message queue for AI agent coordination. Persistent messaging with delivery confirmations and collision avoidance.",
+    tech: ["Node.js", "TypeScript", "SQLite", "CLI"],
+    status: "Open Source",
+    link: "https://github.com/Packetvision-LLC/deadrop",
+    icon: "📬"
+  }
+];
+---
+
+<Base title="Stuart Bain - Solutions Architect, Veteran, Builder" description="Personal website and portfolio of Stuart Bain, Solutions Architect, USMC veteran, and builder with 25+ years in tech">
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-indigo-900 px-4">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="mb-8">
+        <img src="/stuart-caricature.png" alt="Stuart Bain" class="w-48 h-48 mx-auto mb-6 rounded-full shadow-2xl object-cover object-top" />
+        <h1 class="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 bg-clip-text text-transparent">
+          Stuart Bain
+        </h1>
+        <p class="text-2xl md:text-3xl text-gray-600 dark:text-gray-300 mb-4 font-light">
+          IT Executive · Solutions Architect · Veteran · Builder
+        </p>
+        <p class="text-lg md:text-xl text-gray-500 dark:text-gray-400 mb-8 max-w-4xl mx-auto leading-relaxed">
+          25+ years in tech — from Marine intelligence to cloud architecture. Building things that matter.
+        </p>
+      </div>
+      
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+        <a 
+          href="#projects" 
+          class="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+        >
+          View Projects
+        </a>
+        <a 
+          href="/about" 
+          class="px-8 py-4 border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:hover:bg-blue-400 dark:hover:text-gray-900 font-semibold rounded-lg transition-all duration-300"
+        >
+          About Me
+        </a>
+        <a 
+          href="/blog" 
+          class="px-8 py-4 bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 font-semibold rounded-lg transition-all duration-300"
+        >
+          Read Blog
+        </a>
+      </div>
+      
+      <!-- Quick Stats -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
+        <div class="text-center">
+          <div class="text-3xl font-bold text-blue-600 dark:text-blue-400">25+</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Years in Tech</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-purple-600 dark:text-purple-400">USMC</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Veteran</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-indigo-600 dark:text-indigo-400">AWS</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Cloud Architect</div>
+        </div>
+        <div class="text-center">
+          <div class="text-3xl font-bold text-green-600 dark:text-green-400">OSS</div>
+          <div class="text-sm text-gray-600 dark:text-gray-400">Open Source</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Featured Projects -->
+  <section id="projects" class="py-20 px-4 bg-white dark:bg-gray-900">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl md:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
+          Featured Projects
+        </h2>
+        <p class="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+          From AI-powered services to comprehensive management platforms, here's what I've been building.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {projects.map((project) => (
+          <div class="bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 rounded-xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-200 dark:border-gray-700">
+            <div class="flex items-start justify-between mb-4">
+              <div class="text-4xl mb-2">{project.icon}</div>
+              <div class={`px-3 py-1 rounded-full text-sm font-medium ${
+                project.status === 'Live' ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200' :
+                project.status === 'Complete' ? 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200' :
+                project.status === 'In Development' ? 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200' :
+                'bg-gray-100 text-gray-800 dark:bg-gray-700 dark:text-gray-200'
+              }`}>
+                {project.status}
+              </div>
+            </div>
+            
+            <h3 class="text-2xl font-bold mb-3 text-gray-900 dark:text-white">
+              {project.title}
+            </h3>
+            
+            <p class="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+              {project.description}
+            </p>
+            
+            <div class="flex flex-wrap gap-2 mb-4">
+              {project.tech.map((tech) => (
+                <span class="px-3 py-1 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm rounded-full border border-gray-300 dark:border-gray-600">
+                  {tech}
+                </span>
+              ))}
+            </div>
+            
+            {project.link && (
+              <a 
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 font-medium transition-colors duration-300"
+              >
+                Visit Project
+                <svg class="w-4 h-4 ml-2" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                </svg>
+              </a>
+            )}
+          </div>
+        ))}
+      </div>
+      
+      <div class="text-center mt-16">
+        <a 
+          href="/projects" 
+          class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
+        >
+          View All Projects & Case Studies
+          <svg class="w-5 h-5 ml-2" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+</Base>
