@@ -2,7 +2,7 @@
 title: "From Idea to Production: Building Mnemogram"
 description: "A detailed case study of building and launching an AI-powered memory service from concept to production on AWS."
 author: "Stuart Bain"
-pubDate: 2024-01-20T00:00:00Z
+pubDate: 2026-02-16T00:00:00Z
 tags: ["Case Study", "Mnemogram", "AWS", "Rust", "Next.js", "Startup"]
 category: "business"
 featured: true
