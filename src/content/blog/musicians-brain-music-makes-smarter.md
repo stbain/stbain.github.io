@@ -1,5 +1,5 @@
 ---
-title: "The Musician's Brain: Why My Lifetime of Music Actually Made Me Smarter"
+title: "The Musician's Brain: Why Music Makes People Smarter"
 description: "As someone who started piano lessons at age 4, I've always wondered whether my musical training affected more than just my ability to play instruments. Science confirms it does."
 author: "Stuart Bain"
 pubDate: 2026-02-24T00:00:00Z
