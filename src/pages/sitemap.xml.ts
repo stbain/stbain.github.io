@@ -9,7 +9,12 @@ export async function GET() {
   });
   
   // Static pages
-  const staticPages = [
+  const staticPages: Array<{
+    url: string;
+    priority: number;
+    changefreq: string;
+    lastmod?: Date;
+  }> = [
     { url: '', priority: 1.0, changefreq: 'weekly' },
     { url: '/about', priority: 0.9, changefreq: 'monthly' },
     { url: '/projects', priority: 0.9, changefreq: 'monthly' },
@@ -18,7 +23,7 @@ export async function GET() {
   
   // Blog post pages
   const blogPages = blogPosts.map(post => ({
-    url: `/blog/${post.slug}`,
+    url: `/blog/${post.id}`,
     priority: 0.7,
     changefreq: 'monthly',
     lastmod: post.data.updatedDate || post.data.pubDate
